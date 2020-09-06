@@ -32,6 +32,7 @@
       get_template_part('sections/new-popular');
     ?>
  </section>
+ 
 <?php
  get_footer();
 ?>

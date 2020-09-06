@@ -35,7 +35,8 @@ unset($file, $filePath);
     array(
       'headerMenuLocation' => __( 'Header Menu Location' ),
       'catalogueFooter' => __( 'Catalogue Menu Footer' ),
-      'aboutFooter' => __( 'About Menu Footer' )
+      'aboutFooter' => __( 'About Menu Footer' ),
+      'subMenu' => __( 'Sub Menu Location' )
     )
   );
   
@@ -45,7 +46,6 @@ add_action('init', 'theme_features');
 
 function arphabet_widgets_init()
             {
-
                 register_sidebar(array(
                     'name'          => 'Single sidebar',
                     'id'            => 'single_sidebar',
@@ -63,4 +63,33 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
                 return '<!--nextpage-->';
             }
             add_shortcode('pos-nav', 'post_navigaiton');
+
+function wolfactive_post_types() {
+    register_post_type('Blog', array(
+        'public' => true,
+        'labels' => array(
+        'name' => 'Blogs',
+        'add_new_item' => __('Add New Blog'),
+        'edit_item' =>  __('Edit Blog'),
+        'all_items' =>  __('All Blog'),
+        'singular_name' => __('All Blog'),
+        'view_item' => __('View Blogs'),
+        'search_items' => __('Search Blogs'),
+        'featured_image' => __('Image Blog'),
+        'tag' => __('Set tags'),
+        'set_featured_image' => __('Choose Image Blog'),
+        'menu_name' => __( 'Tags' ),
+    ),
+    'menu_icon' => 'dashicons-book',
+    'taxonomies' => array('category', 'post_tag'),
+    'supports' => array(
+        'title',
+        'thumbnail',
+        'custom-fields',
+        'editor',
+        
+    ),
+  ));
+}
+        add_action('init', 'wolfactive_post_types');
 ?>
