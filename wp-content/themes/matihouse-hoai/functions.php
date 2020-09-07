@@ -36,7 +36,8 @@ unset($file, $filePath);
       'headerMenuLocation' => __( 'Header Menu Location' ),
       'catalogueFooter' => __( 'Catalogue Menu Footer' ),
       'aboutFooter' => __( 'About Menu Footer' ),
-      'subMenu' => __( 'Sub Menu Location' )
+      'subMenu' => __( 'Sub Menu Location' ),
+      'sideBarMenu' => __( 'SideBar Menu Location' )
     )
   );
   
@@ -92,4 +93,28 @@ function wolfactive_post_types() {
   ));
 }
         add_action('init', 'wolfactive_post_types');
+
+
+      
+        function get_specifications_fields() {
+        
+            global $post;
+            
+            $specifications_group_id = 65; // Post ID of the specifications field group.
+            $specifications_fields = array();
+            
+            $fields = acf_get_fields( $specifications_group_id );
+            
+            foreach ( $fields as $field ) {
+                $field_value = get_field( $field['name'] );
+                
+                if ( $field_value && !empty( $field_value ) ) {
+                    $specifications_fields[$field['name']] = $field;
+                    $specifications_fields[$field['name']]['value'] = $field_value;
+                }
+            }
+            
+            return $specifications_fields;
+        
+        }
 ?>

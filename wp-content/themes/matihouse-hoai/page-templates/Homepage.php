@@ -333,6 +333,24 @@
 		</div>
 	</div>
 </section>
+<div class="row">  
+<?php 
+    $specifications_fields = get_specifications_fields();
+              
+    foreach ( $specifications_fields as $name => $field ):
+        $value = $field['value'];
+?>     
+     
+    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-xs-12 key">
+        <strong><?php echo $field['label']; ?>:</strong>
+    </div>
+    <div class="col-xl-9 col-lg-8 col-md-8 col-sm-6 col-xs-12 value">
+        <?php echo $value; ?>      
+    </div> 
+         
+    <?php endforeach; ?>
+</div> 
+
 
 <?php
  get_footer();

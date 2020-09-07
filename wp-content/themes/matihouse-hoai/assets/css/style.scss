@@ -93,12 +93,12 @@ img{
 	height:auto;
 }
 .container{
-    width: 1200px;
+    width: 1150px;
     margin: 0 auto;
 }
 .container-fuild{
     width: 1300px;
-    margin: auto;
+    margin: 0 auto;
 }
 .clear{
 	clear:both;
@@ -403,6 +403,7 @@ img{
                     height: auto;
                     width: 100%;
                     margin-right: -32%;
+                    margin-top: 30px;
                 }
             }
         }
@@ -542,6 +543,89 @@ img{
         }
     }
 }
+.site-header-category{
+    position: relative;
+    overflow: hidden;
+    .container-img{
+        background:#BE1E2D;
+        &__behind{
+        
+        }
+        &__front{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        
+                img{
+                    height: auto;
+                    width: 40%;
+                    
+                }
+        }
+        &__glamorous{
+            position: absolute;
+            left: 70px;
+            top: 17%;
+            p{
+                font-family: PlayfairDisplay;
+                font-size: 105px;
+                writing-mode: vertical-rl;
+                color: #A62125;
+                text-transform: uppercase;
+                opacity: 0.6;
+            }
+        }
+        &__collection{
+            position: absolute;
+            left: 400px;
+            top: 13%;
+            span{
+                font-family: PlayfairDisplay;
+                font-size: 60px;
+                writing-mode: vertical-rl;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+        }
+        &__title{
+            position: absolute;
+            width: 100%;
+            top: 23%;
+            span{
+                display: block;
+                text-align: center;
+                font-family: PlayfairDisplay;
+                font-size: 90px;
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+        }
+        &__hot-dress{
+            position: absolute;
+            top: 32%;
+            display: flex;
+            flex-direction: column;
+            
+            left: 82%;
+            h3{ 
+                font-family: Arsenal-bold;
+                font-size: 20px;
+                font-weight: 100;
+                color:#FFF;
+            }
+            img{
+                height: 14px;
+                width: auto;
+            }
+            span{
+                font-family: Arsenal-bold;
+                font-size: 20px;
+                color:#FFF;
+            }
+        }
+    }
+}
 /*----Header----*/
 
 /*----Content Body-----*/
@@ -672,8 +756,8 @@ img{
             }
             &__grid{
                 display: grid;
-                grid-template-columns: auto auto;
-                grid-gap: 35px;
+                grid-template-columns: 48% 48%;
+                grid-gap: 4%;
                
                 &__item{
                     &:first-child{
@@ -701,11 +785,9 @@ img{
                         color: #231F20;
                     }
                     &__img{
-                        height: 590px;
-                        overflow: hidden;
+                        
                         img{
-                            height: 100%;
-                            vertical-align: middle;
+                        
                             
                         }
                     }
@@ -991,15 +1073,12 @@ img{
     }
     &__grid{
         display: grid;
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 20px;
+        grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+        grid-gap: 2%;
         &__item{
             &__img{
-                height: 468px;
-                overflow: hidden;
+                
                 img{
-                    height: 100%;
-                    vertical-align: middle;
                     
                 }
             }
@@ -1185,20 +1264,21 @@ img{
 @media(max-width:1024px){
     .container-fuild{
         max-width: 95%;
+        margin:0 auto;
     }
     .container{
         max-width: 90%;
     }
-    .container-img__behind img{
+    .site-header-home-page .container-img__behind img{
         width: 410px !important;
     }
-    .container-img__fashion{
+    .site-header-home-page .container-img__fashion{
         left: -27px !important;
     }
-    .container-img__fashion__item{
+    .site-header-home-page .container-img__fashion__item{
         margin-top:25%;
     }
-    .container-img__fashion h2 {
+    .site-header-home-page.container-img__fashion h2 {
         font-size: 240px !important;
     }
     .site-header-home-page .container-img__aturmn__item h2 {

@@ -104,13 +104,13 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 1150px;
   margin: 0 auto;
 }
 
 .container-fuild {
   width: 1300px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .clear {
@@ -597,6 +597,7 @@ img {
   height: auto;
   width: 100%;
   margin-right: -32%;
+  margin-top: 30px;
 }
 
 .site-header-home-page .container-img__aturmn {
@@ -751,6 +752,106 @@ img {
 .site-header-home-page .container-img__icon__item__instagram a {
   margin-left: 20px;
   color: #fff;
+}
+
+.site-header-category {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-header-category .container-img {
+  background: #BE1E2D;
+}
+
+.site-header-category .container-img__front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.site-header-category .container-img__front img {
+  height: auto;
+  width: 40%;
+}
+
+.site-header-category .container-img__glamorous {
+  position: absolute;
+  left: 70px;
+  top: 17%;
+}
+
+.site-header-category .container-img__glamorous p {
+  font-family: PlayfairDisplay;
+  font-size: 105px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #A62125;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.site-header-category .container-img__collection {
+  position: absolute;
+  left: 400px;
+  top: 13%;
+}
+
+.site-header-category .container-img__collection span {
+  font-family: PlayfairDisplay;
+  font-size: 60px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.site-header-category .container-img__title {
+  position: absolute;
+  width: 100%;
+  top: 23%;
+}
+
+.site-header-category .container-img__title span {
+  display: block;
+  text-align: center;
+  font-family: PlayfairDisplay;
+  font-size: 90px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.site-header-category .container-img__hot-dress {
+  position: absolute;
+  top: 32%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 82%;
+}
+
+.site-header-category .container-img__hot-dress h3 {
+  font-family: Arsenal-bold;
+  font-size: 20px;
+  font-weight: 100;
+  color: #FFF;
+}
+
+.site-header-category .container-img__hot-dress img {
+  height: 14px;
+  width: auto;
+}
+
+.site-header-category .container-img__hot-dress span {
+  font-family: Arsenal-bold;
+  font-size: 20px;
+  color: #FFF;
 }
 
 /*----Header----*/
@@ -908,9 +1009,9 @@ img {
 .collection__grid__item-2__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  grid-gap: 35px;
+  -ms-grid-columns: 48% 48%;
+      grid-template-columns: 48% 48%;
+  grid-gap: 4%;
 }
 
 .collection__grid__item-2__grid__item:first-child .collection__grid__item-2__grid__item__button a {
@@ -939,16 +1040,6 @@ img {
   margin-bottom: 40px;
   font-weight: 600;
   color: #231F20;
-}
-
-.collection__grid__item-2__grid__item__img {
-  height: 590px;
-  overflow: hidden;
-}
-
-.collection__grid__item-2__grid__item__img img {
-  height: 100%;
-  vertical-align: middle;
 }
 
 .collection__grid__item-2__grid__item__tag-color {
@@ -1279,19 +1370,9 @@ img {
 .best-seller__grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
-  grid-gap: 20px;
-}
-
-.best-seller__grid__item__img {
-  height: 468px;
-  overflow: hidden;
-}
-
-.best-seller__grid__item__img img {
-  height: 100%;
-  vertical-align: middle;
+  -ms-grid-columns: 24.5% 24.5% 24.5% 24.5%;
+      grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+  grid-gap: 2%;
 }
 
 .best-seller__grid__item__tag-color {
@@ -1512,20 +1593,21 @@ footer .footer__grid__item-5__title h3 {
 @media (max-width: 1024px) {
   .container-fuild {
     max-width: 95%;
+    margin: 0 auto;
   }
   .container {
     max-width: 90%;
   }
-  .container-img__behind img {
+  .site-header-home-page .container-img__behind img {
     width: 410px !important;
   }
-  .container-img__fashion {
+  .site-header-home-page .container-img__fashion {
     left: -27px !important;
   }
-  .container-img__fashion__item {
+  .site-header-home-page .container-img__fashion__item {
     margin-top: 25%;
   }
-  .container-img__fashion h2 {
+  .site-header-home-page.container-img__fashion h2 {
     font-size: 240px !important;
   }
   .site-header-home-page .container-img__aturmn__item h2 {
