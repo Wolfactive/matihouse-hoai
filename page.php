@@ -5,9 +5,6 @@
  get_header();
 ?>
  <section class="wrapper" id="HomePage">   
-     <div class="carousel">
-     <?php echo do_shortcode('[rev_slider alias="home-slider"]'); ?>
-    </div>
     <?php
 		if ( have_posts() ) {
 

@@ -1,30 +1,64 @@
-    <section class="footer">
-	    <!----------=========Main==========-------->
-	  <div class="footer__main">
-	     <div class="main__contain container row-divide">
-		   <div class="footer__item col-divide-4 col-divide-md-12">
-		       <img src="<?php echo get_field('logo','option') ?>" alt="footer-logo logo">
-		    </div>		  
-		  <div class="footer__item col-divide-4 col-divide-md-12">
-		      <h3 class="footer__title title--section text--upcase">thông tin liên hệ</h3>
-		      <p><b><i class="fas fa-map-marker-alt icon"></i></b><?php echo get_field('tru_so_chinh','option') ?></p>
-		      <p><b><i class="fas fa-phone icon"></i></b><?php echo get_field('hotline','option') ?></p>
-		      <p><b><i class="fas fa-envelope icon"></i></b><?php echo get_field('mail','option') ?></p>
-		  </div>
-		  <div class="footer__item col-divide-4 col-divide-md-12">
-		       <?php // echo do_shortcode('[contact-form-7 id="28" title="Đăng ký tư vấn"]') ?>
-		  </div>
-		 </div>
-	  </div>    
-	    <!----------=========Main==========-------->
-		
-		<!----------=========Sub==========-------->
-	  <div class="footer__sub">
-	    <div class="container"><p class="text--center">Copyright © 2014 - 2020 Công Ty TNHH Viện Thẩm Mỹ DIVA. All Right Reserved.</p></div>
-	  </div>
-	    <!----------=========Sub==========-------->
-</section>  
-   
+
+<footer>
+
+<div class="container">
+  <div class="footer">
+    <div class="footer__grid">
+      <div class="footer__grid__item-1">
+        <img src="<?php the_field('logo','option') ?>" alt="">
+      </div>
+      <div class="footer__grid__item-2">
+      <div class="footer__grid__item-2__title">
+          <h3>catalogue</h3>
+        </div>
+      <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'catalogueFooter' ) ); 
+      ?>
+      </div>
+      <div class="footer__grid__item-3">
+        <div class="footer__grid__item-3__title">
+          <h3>shop</h3>
+        </div>
+      <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'aboutFooter', 
+            'container_class' => 'custom-menu-class' ) ); 
+      ?>
+      </div>
+      <div class="footer__grid__item-4">
+        <div class="footer__grid__item-4__title">
+          <h3>contacts</h3>
+        </div>
+        <div class="footer__grid__item-4__phone">
+          <a href="">0911 955 500</a>
+        </div>
+        <div class="footer__grid__item-4__web">
+          <a href="">matihouse.com</a>
+        </div>
+        <div class="footer__grid__item-4__icon">
+          <div class="footer__grid__item-4__icon__item">
+            <div class="footer__grid__item-4__icon__item__instagram">
+              <a href=""><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer__grid__item-4__icon__item__facebook">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div class="footer__grid__item-5">
+        <div class="footer__grid__item-5__title">
+          <h3>Subscribe to our newsletter</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>  
+<script scr="<?php _e(get_theme_file_uri('/assets/js/custom.js'))?>"></script>
   <?php wp_footer(); ?>   
  </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
-require_once THEME_DIR.'/core/imagecow/imagecow/src/autoloader.php';
-require_once THEME_DIR.'/core/imagecow/imagecow/src/Image.php';
-require_once THEME_DIR.'/core/imagecow/imagecow/src/ImageException.php';
+require_once THEME_DIR.'/includes/core/imagecow/imagecow/src/autoloader.php';
+require_once THEME_DIR.'/includes/core/imagecow/imagecow/src/Image.php';
+require_once THEME_DIR.'/includes/core/imagecow/imagecow/src/ImageException.php';
 
 use Imagecow\Image;
 

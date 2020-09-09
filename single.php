@@ -17,22 +17,16 @@
 				  <div class="new__content text--justify col-divide-8 col-divide-md-12">
 				  <?php the_content() ?>
 				 </div>
-				 <div  class="single__sidebar col-divide-4 col-divide-md-12">
-				    <?php
-                        if (is_active_sidebar('single_sidebar')) {
-                            dynamic_sidebar('single_sidebar');
-                        }
-                    ?>
-				 </div>
+				 
 				</div>
 				
 			</div>
 		<?php }	}	?>
 
     </div>
-    <?php      
-     get_template_part('sections/new-popular');
-    ?>
+    <div style="background-color:<?php the_field('color_1');?>; height:80px; width:80px">
+	<div style="background-color:<?php the_field('color_2');?>; height:80px; width:80px">	
+	</div>
  </section>
 <?php
  get_footer();
