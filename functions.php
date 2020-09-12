@@ -81,8 +81,10 @@ function wolfactive_post_types() {
         'tag' => __('Set tags'),
         'set_featured_image' => __('Choose Image Blog'),
         'menu_name' => __( 'Tags' ),
+        
     ),
     'menu_icon' => 'dashicons-book',
+    'has_archive' => true,
     'taxonomies' => array('category', 'post_tag'),
     'supports' => array(
         'title',

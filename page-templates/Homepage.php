@@ -298,7 +298,7 @@
 		 <div class="best-seller__title">
  			<h3>
 				 best seller
-			 </h3>
+			</h3>
 		 </div>
  		<div class="best-seller__grid">
 			<?php
@@ -312,7 +312,7 @@
 			<?php while($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="best-seller__grid__item">
 					<div class="best-seller__grid__item__img">
-						<?php echo get_the_post_thumbnail(get_the_ID());?>
+						<a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail(get_the_ID());?></a>		
 					</div>
 					<div class="best-seller__grid__item__tag-color">
 						<div class="best-seller__grid__item__tag-color__tag-name">
@@ -321,7 +321,7 @@
 						<div class="best-seller__grid__item__tag-color__color">
 							<div style="background-color:<?php the_field('color_1');?>;"></div>
 							<div style="background-color:<?php the_field('color_2');?>;"></div>	
-							<div style="background-color:<?php the_field('color_2');?>;"></div>
+							<div style="background-color:<?php the_field('color_3');?>;"></div>
 						</div>
 					</div>	
 					<div class="best-seller__grid__item__price">

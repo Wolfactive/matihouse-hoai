@@ -54,3 +54,15 @@ function click_down_season(){
     document.getElementById('sidebar-category__item__season__arrow-up').style.display="block";
   
   }
+
+  function click_view_size_up(){
+    document.getElementById('sidebar-category__item__size__arrow-up').style.display="none";
+    document.getElementById('sidebar-category__item__size__arrow-down').style.display="block";
+    document.getElementsByClassName('sidebar-category__item__size__items')[0].style.display = "none";
+  }
+function click_view_size_down(){
+    document.getElementById('details-body__grid__right__item-1__grid__content__size__dropdown__arrow-down').style.display="none";
+    document.getElementById('details-body__grid__right__item-1__grid__content__size__dropdown__arrow-up').style.display="block";
+    document.getElementsByClassName('sidebar-category__item__size__items')[0].style.display = "grid";
+    
+  }

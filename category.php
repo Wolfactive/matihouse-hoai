@@ -194,6 +194,7 @@
               </ul>
           </div>
         </div>
+        
         <div class="sidebar-category__item-content__grid-head">
         <?php
             $args = array(
@@ -236,7 +237,6 @@
           <?php endwhile;?>
         </div>
 
-        
         <div class="sidebar-category__item-content__grid-body">
           <?php
             $args = array(
@@ -250,7 +250,7 @@
           <?php while($the_query->have_posts()) : $the_query->the_post(); ?>
             <div class="sidebar-category__item-content__grid-body__item">
               <div class="sidebar-category__item-content__grid-body__item__img">
-                <?php echo get_the_post_thumbnail(get_the_ID());?>
+               <a href="<?php the_permalink(); ?>"><?php echo get_the_post_thumbnail(get_the_ID());?></a> 
                 <div class="sidebar-category__item-content__grid-body__item__img__add">
                   <a href="">+ Add to bag</a>
                 </div>

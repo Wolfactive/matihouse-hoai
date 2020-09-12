@@ -1,7 +1,5 @@
 <?php
- /**
- * template name: Introduce
- */
+ 
  get_header();
 ?>
  <section class="wrapper" id="HomePage">   
