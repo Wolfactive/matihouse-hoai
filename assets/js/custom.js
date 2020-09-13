@@ -66,3 +66,40 @@ function click_view_size_down(){
     document.getElementsByClassName('sidebar-category__item__size__items')[0].style.display = "grid";
     
   }
+
+  window.onscroll = function() {myFixMenu()};
+  function myFixMenu() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+      document.getElementsByClassName("site-header")[0].style.position = "fixed";
+      document.getElementsByClassName("site-header")[0].style.background = "#BE1E2D";
+      document.getElementsByClassName("site-header")[0].style.padding = "45px 0px 10px 0px";
+    } else {
+      document.getElementsByClassName("site-header")[0].style.background = "center";
+      document.getElementsByClassName("site-header")[0].style.paddingTop = "45px";
+    }
+    
+  }
+ 
+  window.onscroll = function() {myFixMenu_detail()};
+  function myFixMenu_detail() {
+    if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+      document.getElementsByClassName("details-post-type")[0].style.position = "fixed";
+      document.getElementsByClassName("details-post-type")[0].style.background = "#FFFFFF";
+      document.getElementsByClassName("details-post-type")[0].style.padding = "10px 0px 10px 0px";
+      document.getElementsByClassName("details-post-type")[0].style.marginTop = "0px";
+      document.getElementsByClassName("details-post-type")[0].style.left = "0";
+      document.getElementsByClassName("details-post-type")[0].style.right = "0";
+      if(window.screen.width > 438 ){
+        document.getElementsByClassName("details-post-type")[0].style.top = "30px";
+      }
+      else{
+        document.getElementsByClassName("details-post-type")[0].style.top = "0px";
+      }
+    } else {
+      document.getElementsByClassName("details-post-type")[0].style.background = "center";
+      document.getElementsByClassName("details-post-type")[0].style.marginTop = "20px";
+      document.getElementsByClassName("details-post-type")[0].style.position = "unset";
+      document.getElementsByClassName("details-post-type")[0].style.padding = "0px";
+    }
+    
+  }

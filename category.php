@@ -260,9 +260,9 @@
                   <?php the_tags( ' ', ', ', '<br />' ); ?>
                 </div>
                 <div class="sidebar-category__item-content__grid-body__item__tag-color__color">
-                  <div style="background-color:<?php the_field('color_1');?>;"></div>
-                  <div style="background-color:<?php the_field('color_2');?>;"></div>	
-                  <div style="background-color:<?php the_field('color_3');?>;"></div>
+                  <div class="color-item" style="background-color:<?php the_field('color_1');?>;"></div>
+                  <div class="color-item" style="background-color:<?php the_field('color_2');?>;"></div>	
+                  <div class="color-item" style="background-color:<?php the_field('color_3');?>;"></div>
                 </div>
               </div>	
               <div class="sidebar-category__item-content__grid-body__item__price">
@@ -280,6 +280,23 @@
     </div>
   </div>
 </section>
+<script>
+  
+
+    for(var i = 0 ; i< document.getElementsByClassName("color-item").length; i++ )
+    {
+      if(document.getElementsByClassName("color-item")[i].style.backgroundColor === "#ffffff")
+      {
+        document.getElementsByClassName("color-item")[i].style.border ="1px solid #000";
+      }
+      else{
+
+      }
+    }
+  
+  
+  
+</script>
 <?php
  get_footer();
 ?>

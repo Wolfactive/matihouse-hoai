@@ -19,7 +19,9 @@
 				<img src="<?php the_field('memu','option') ?>" alt="">
 			</div>
 			<div class="menu-bar__logo">
-				<img src="<?php the_field('logo','option') ?>" alt="">
+				<a href="<?php echo site_url( '/home-page/' ); ?>">
+					<img src="<?php the_field('logo','option') ?>" alt="">
+				</a>	
 			</div>
 			<div class="menu-bar__group-icon">
 				<div class="menu-bar__group-icon__cart">

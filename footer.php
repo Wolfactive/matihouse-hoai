@@ -39,10 +39,10 @@
         <div class="footer__grid__item-4__icon">
           <div class="footer__grid__item-4__icon__item">
             <div class="footer__grid__item-4__icon__item__instagram">
-              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="footer__grid__item-4__icon__item__facebook">
-              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
             </div>
           </div>
           
@@ -52,6 +52,9 @@
       <div class="footer__grid__item-5">
         <div class="footer__grid__item-5__title">
           <h3>Subscribe to our newsletter</h3>
+        </div>
+        <div class="footer__grid__item-5__email">
+          <input type="email" name="" id="" placeholder="Your e-mail">
         </div>
       </div>
     </div>

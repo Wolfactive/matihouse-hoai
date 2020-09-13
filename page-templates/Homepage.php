@@ -46,13 +46,13 @@
 						<img src="<?php the_field('dot_circle','option'); ?>" alt="">
 					</div>
 					<div class="container-img__dot__group__item">
-						<img src="<?php the_field('dot','option'); ?>" alt="">
+						<span></span>
 					</div>
 					<div class="container-img__dot__group__item">
-						<img src="<?php the_field('dot','option'); ?>" alt="">
+						<span></span>
 					</div>
 					<div class="container-img__dot__group__item">
-						<img src="<?php the_field('dot','option'); ?>" alt="">
+						<span></span>
 					</div>
 				
 				</div>
@@ -63,10 +63,10 @@
 			<div class="container">
 				<div class="container-img__icon__item">
 					<div class="container-img__icon__item__facebook">
-						<a href=""><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
 					</div>
 					<div class="container-img__icon__item__instagram">
-						<a href=""><i class="fab fa-instagram"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
 					</div>
 				</div>
 				
@@ -76,6 +76,10 @@
 </section>
 <section class="collection">
 	<div class="container">
+		<div class="collection__sub-menu-mobile">
+ 			<?php wp_nav_menu(array( 'theme_location' => 'subMenu' )) ?>
+		</div>
+		
 		<div class="collection__grid">
 			<div class="collection__grid__item-1">
 				<div class="collection__grid__item-1__grid">
@@ -125,7 +129,7 @@
 				<div class="collection__grid__item-2__title">
 					
 					<h3>
-						spring collection
+						<a href="<?php echo site_url( '/category/spring-collection' ); ?>">spring collection</a>
 					</h3>
 				</div>
 				<div class="collection__grid__item-2__grid">
@@ -149,23 +153,25 @@
 							<div class="collection__grid__item-2__grid__item__button">
 								<a href="<?php the_field('button'); ?>"><?php the_field('button_text'); ?></a>
 							</div>
-							<div class="collection__grid__item-2__grid__item__img">
-								<?php echo get_the_post_thumbnail(get_the_ID());?>
-							</div>
-							<div class="collection__grid__item-2__grid__item__tag-color">
-								<div class="collection__grid__item-2__grid__item__tag-color__tag-name">
-									<?php the_tags( ' ', ', ', '<br />' ); ?>
+							<div>							
+								<div class="collection__grid__item-2__grid__item__img">
+									<?php echo get_the_post_thumbnail(get_the_ID());?>
 								</div>
-								<div class="collection__grid__item-2__grid__item__tag-color__color">
-									<div style="background-color:<?php the_field('color_1');?>;"></div>
-									<div style="background-color:<?php the_field('color_2');?>;"></div>	
-									<div style="background-color:<?php the_field('color_3');?>;"></div>
-								</div>
-							</div>	
-							<div class="collection__grid__item-2__grid__item__price">
-								<span><?php the_field('price'); ?>$ </span>
-								<a href=""><i class="fas fa-heart"></i></a>
-							</div>				
+								<div class="collection__grid__item-2__grid__item__tag-color">
+									<div class="collection__grid__item-2__grid__item__tag-color__tag-name">
+										<?php the_tags( ' ', ', ', '<br />' ); ?>
+									</div>
+									<div class="collection__grid__item-2__grid__item__tag-color__color">
+										<div style="background-color:<?php the_field('color_1');?>;"></div>
+										<div style="background-color:<?php the_field('color_2');?>;"></div>	
+										<div style="background-color:<?php the_field('color_3');?>;"></div>
+									</div>
+								</div>	
+								<div class="collection__grid__item-2__grid__item__price">
+									<span><?php the_field('price'); ?>$ </span>
+									<a href=""><i class="fas fa-heart"></i></a>
+								</div>	
+							</div>			
 						</div>		
 					<?php endwhile;?>
 				</div>
