@@ -50,7 +50,7 @@
           </div>
         </div>
       
-        <div class="footer__grid__grid-mobile">
+      <div class="footer__grid__grid-mobile">
         <div class="footer__grid__grid-mobile__item-2">
           <div class="footer__grid__grid-mobile__item-2__title">
               <h3>catalogue</h3>
@@ -92,7 +92,6 @@
           </div>
         </div>
       </div>
-    </div>
       <div class="footer__grid__item-5">
         <div class="footer__grid__item-5__title">
           <h3>Subscribe to our newsletter</h3>
@@ -101,8 +100,7 @@
           <input type="email" name="" id="" placeholder="Your e-mail">
         </div>
       </div>
-
-    
+    </div>
   </div>
 </div>
 </footer>  
