@@ -153,7 +153,10 @@
             <i class="fas fa-caret-down"></i>
             </div>
         </div>
-
+        <div class="sidebar-category__item__price">
+            <p>Price</p>
+            <input type="range" min="5" max="200" value="120" step="1">
+        </div>
         <div class="sidebar-category__item__material">
           <div class="sidebar-category__item__material__title">
             <p>material</p>
@@ -176,6 +179,7 @@
             <i class="fas fa-caret-down"></i>
           </div>
         </div>
+        
       </div>
       <div class="sidebar-category__item-content">
         <div class="sidebar-category__item-content__head">
@@ -226,9 +230,15 @@
                     <span></span>
                 </div>
                 <div class="sidebar-category__item-content__grid-head__item__tag-color__color">
-                  <div style="background-color:<?php the_field('color_1');?>;"></div>
-                  <div style="background-color:<?php the_field('color_2');?>;"></div>	
-                  <div style="background-color:<?php the_field('color_3');?>;"></div>
+                  <div class="color-item" style="background-color:<?php the_field('color_1');?>;
+                    <?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>
+                  <div class="color-item" style="background-color:<?php the_field('color_2');?>;
+                    <?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>	
+                  <div class="color-item" style="background-color:<?php the_field('color_3');?>;
+                    <?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>
                 </div>
               </div>	
              
@@ -260,9 +270,15 @@
                   <?php the_tags( ' ', ', ', '<br />' ); ?>
                 </div>
                 <div class="sidebar-category__item-content__grid-body__item__tag-color__color">
-                  <div class="color-item" style="background-color:<?php the_field('color_1');?>;"></div>
-                  <div class="color-item" style="background-color:<?php the_field('color_2');?>;"></div>	
-                  <div class="color-item" style="background-color:<?php the_field('color_3');?>;"></div>
+                  <div class="color-item" style="background-color:<?php the_field('color_1');?>;
+                    <?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>
+                  <div class="color-item" style="background-color:<?php the_field('color_2');?>;
+                    <?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>	
+                  <div class="color-item" style="background-color:<?php the_field('color_3');?>;
+                    <?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                  </div>
                 </div>
               </div>	
               <div class="sidebar-category__item-content__grid-body__item__price">
@@ -280,23 +296,7 @@
     </div>
   </div>
 </section>
-<script>
-  
 
-    for(var i = 0 ; i< document.getElementsByClassName("color-item").length; i++ )
-    {
-      if(document.getElementsByClassName("color-item")[i].style.backgroundColor === "#ffffff")
-      {
-        document.getElementsByClassName("color-item")[i].style.border ="1px solid #000";
-      }
-      else{
-
-      }
-    }
-  
-  
-  
-</script>
 <?php
  get_footer();
 ?>

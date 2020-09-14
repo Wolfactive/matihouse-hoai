@@ -67,12 +67,18 @@ function click_view_size_down(){
     
   }
 
-  window.onscroll = function() {myFixMenu()};
+  window.onscroll = function() {myFixMenu();myFixMenu_detail()};
   function myFixMenu() {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
       document.getElementsByClassName("site-header")[0].style.position = "fixed";
       document.getElementsByClassName("site-header")[0].style.background = "#BE1E2D";
       document.getElementsByClassName("site-header")[0].style.padding = "45px 0px 10px 0px";
+      if(window.screen.width > 438 ){
+        document.getElementsByClassName("site-header")[0].style.paddingTop = "30px";
+      }
+      else{
+        document.getElementsByClassName("site-header")[0].style.paddingTop = "15px";
+      }
     } else {
       document.getElementsByClassName("site-header")[0].style.background = "center";
       document.getElementsByClassName("site-header")[0].style.paddingTop = "45px";
@@ -80,7 +86,6 @@ function click_view_size_down(){
     
   }
  
-  window.onscroll = function() {myFixMenu_detail()};
   function myFixMenu_detail() {
     if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
       document.getElementsByClassName("details-post-type")[0].style.position = "fixed";
@@ -102,4 +107,14 @@ function click_view_size_down(){
       document.getElementsByClassName("details-post-type")[0].style.padding = "0px";
     }
     
+  }
+
+  function plus(){
+    document.getElementById("quanlity").stepUp();
+  }
+  function down(){
+    document.getElementById("quanlity").stepDown();
+    if(document.getElementById("quanlity").value <=0){
+      document.getElementById("quanlity").value = 0;
+    }
   }

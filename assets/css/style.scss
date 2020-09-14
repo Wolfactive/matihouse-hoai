@@ -64,6 +64,11 @@ body{
 	color:#333;
 	font-family: Arsenal;
 }
+select{
+    outline: none;
+    border: none;
+    
+}
 ::selection {
     background-color: var(--primary-bg-color);
     color: #fff;
@@ -497,9 +502,25 @@ img{
                                 
                                 font-weight: 600;
                             }
-                            &__plus{
-                                
-                                font-weight: 600;
+                            &__plus{ 
+                                width: 60px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                input[type=number]::-webkit-inner-spin-button, 
+                                input[type=number]::-webkit-outer-spin-button { 
+                                -webkit-appearance: none;
+                                }
+                                input[type=number]{
+                                    width: 20px;
+                                    text-align: center;
+                                }
+                                input{
+                                    width: 10px;
+                                    outline: none;
+                                    background: center;
+                                    border: none;
+                                }
                             }
                         }
                         &__price{
@@ -653,9 +674,21 @@ img{
                                 
                                 font-weight: 600;
                             }
-                            &__plus{
-                                
-                                font-weight: 600;
+                            &__plus{ 
+                                width: 40px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                input[type=number]::-webkit-inner-spin-button, 
+                                input[type=number]::-webkit-outer-spin-button { 
+                                -webkit-appearance: none;
+                                }
+                                input{
+                                    width: 10px;
+                                    outline: none;
+                                    background: center;
+                                    border: none;
+                                }
                             }
                         }
                         &__price{
@@ -795,9 +828,21 @@ img{
                                 
                                 font-weight: 600;
                             }
-                            &__plus{
-                                
-                                font-weight: 600;
+                            &__plus{ 
+                                width: 40px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                input[type=number]::-webkit-inner-spin-button, 
+                                input[type=number]::-webkit-outer-spin-button { 
+                                -webkit-appearance: none;
+                                }
+                                input{
+                                    width: 10px;
+                                    outline: none;
+                                    background: center;
+                                    border: none;
+                                }
                             }
                         }
                         &__price{
@@ -1865,14 +1910,44 @@ img{
                 color: #A62125;
             }
         }
+        &__price{
+            p{
+                font-family: Arsenal-bold;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+            }  
+            input[type='range'] {
+                overflow: hidden;
+                width:50%;
+                -webkit-appearance: none;
+                background-color: #000000;
+                height: 5px;
+                outline:none;
+              }
+              
+              input[type='range']::-webkit-slider-runnable-track {
+                -webkit-appearance: none;
+                color: #A62125;
+                margin-top: -1px;
+              }
+              
+              input[type='range']::-webkit-slider-thumb {
+                width: 5px;
+                -webkit-appearance: none;
+                height: 10px;
+                cursor: pointer;
+                background: #A62125;
+                box-shadow: -80px 0 0 80px #A62125;
+              }
+        }
         &__material{
             width: 50%;
-            margin-top:40px;
+            margin-top:20px;
             position: relative;
             &__title{
                 font-family: Arsenal-bold;
                 text-transform: capitalize;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
             &__arrow-down{
                 display: none;
@@ -1892,7 +1967,6 @@ img{
         }
         &__season{
             width: 50%;
-            margin-top:40px;
             position: relative;
             &__title{
                 font-family: Arsenal-bold;
@@ -2231,14 +2305,110 @@ img{
          &__grid{
              display: grid;
              grid-template-columns: 26% 16% 16% 16% 26%;
-             &__item-1{
+             &__grid-mobile{
+                 display: none;
+                 &__item-2{
+                    text-align: left;
+                    ul{
+                        list-style: none;
+                        li{
+                            padding-top: 10px;
+                            a{
+                                text-decoration: none;
+                                color:#fff;
+                            }
+                        }
+                    }
+                    &__title{
+                        h3{
+                            text-transform: capitalize;
+                            color: #fff;
+                            border-bottom:2px solid #AA514C;
+                            font-family: Arsenal-bold;
+                            width: min-content;
+                        }
+                    }
+                }
+                &__item-3{
+                    text-align: left;
+                    ul{
+                        list-style: none;
+                        li{
+                            padding-top: 10px;
+                            a{
+                                text-decoration: none;
+                                color:#fff;
+                            }
+                        }
+                    }
+                    &__title{
+                        h3{
+                            text-transform: capitalize;
+                            color: #fff;
+                            border-bottom:2px solid #AA514C;
+                            font-family: Arsenal-bold;
+                            width: min-content;
+                        }
+                    }
+                }
+                &__item-4{
+                    text-align: left;
+                    &__title{
+                        h3{
+                            text-transform: capitalize;
+                            color: #fff;
+                            border-bottom:2px solid #AA514C;
+                            font-family: Arsenal-bold;
+                            width: min-content;
+                        }
+                    }
+                    &__phone{
+                        padding-top: 10px;
+                        a{
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                    &__web{
+                        padding-top: 10px;
+                        a{
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                    &__icon{
+                        padding-top: 35px;
+                        &__item{
+                            display: flex;
+                            align-items: center;
+    
+                            &__facebook{
+                                a{
+                                    padding-left:10px;
+                                    text-decoration: none;
+                                    color:#fff;
+                                }
+                            }
+                            &__instagram{
+                                
+                                a{
+                                    font-size: 18px;
+                                    text-decoration: none;
+                                    color:#fff;
+                                }
+                            }
+                        }
+                    }
+                }
+             }
+            &__item-1{
                  text-align: center;
                  img{
                      width: 50%;
                      margin-top:-2px;
                  }
-             }
-             &__item-2{
+            }
+            &__item-2{
                 text-align: left;
                 ul{
                     list-style: none;
@@ -2357,6 +2527,7 @@ img{
                     }
                 }
             }
+
          }
      }
  }
@@ -2649,6 +2820,7 @@ img{
     .sub-banner__item {
         height: 300px;
     }
+    
     .sub-banner__item__img{
         display: none;
     }
@@ -2681,11 +2853,11 @@ img{
         width: 50%;
     }
     .sub-banner__item__des {
-        left: 48%;
+        left: 45%;
         top: 50%;
     }
     .sub-banner__item__des__contain {
-        width: 175px;
+        width: 190px;
     }
     .sub-banner__item__des__contain p {
         color: #fff;
@@ -2708,45 +2880,60 @@ img{
     footer .footer__grid {
         grid-template-columns: auto;
     }
-    footer .footer__grid__item-2 {
+    footer .footer__grid__grid-mobile__item-2 {
         margin-top: 20px;
         text-align: center;
     }
-    footer .footer__grid__item-2__title h3{
+    footer .footer__grid__grid-mobile__item-2__title h3{
         margin: auto;
     }
-    footer .footer__grid__item-2 ul {
+    footer .footer__grid__grid-mobile__item-2 ul {
         list-style: none;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto;
     }
-    footer .footer__grid__item-3 {
+    footer .footer__grid__grid-mobile__item-3 {
         margin-top: 20px;
         text-align: center;
     }
-    footer .footer__grid__item-3__title h3{
+    footer .footer__grid__grid-mobile__item-3__title h3{
         margin: auto;
     }
-    footer .footer__grid__item-3 ul {
+    footer .footer__grid__grid-mobile__item-3 ul {
         list-style: none;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
    
-    footer .footer__grid__item-4 {
+    footer .footer__grid__grid-mobile__item-4 {
         margin-top: 20px;
         text-align: center;
     }
-    footer .footer__grid__item-4__title h3 {
+    footer .footer__grid__grid-mobile__item-4__title h3 {
         margin: auto;
         width: fit-content;
     }
-    footer .footer__grid__item-4__icon__item {
+    footer .footer__grid__grid-mobile__item-4__icon__item {
         justify-content: center;
     }
     footer .footer__grid__item-5 {
-        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 20px;
+        width: fit-content;
+    }
+    footer .footer__grid__item-2{
+        display: none   ;
+    }
+    footer .footer__grid__item-3{
+        display: none   ;
+    }
+    footer .footer__grid__item-4{
+        display: none   ;
+    }
+    footer .footer__grid__grid-mobile{
+        display: grid !important;
+        grid-template-columns: 33% 33% 33%;
     }
     //page-2
     .site-header-category .container-img__title span {

@@ -101,9 +101,15 @@
 										<?php the_tags( ' ', ', ', '<br />' ); ?>
 									</div>
 									<div class="collection__grid__item-1__grid__item__tag-color__color">
-										<div style="background-color:<?php the_field('color_1');?>;"></div>
-										<div class="collection__grid__item-1__grid__item__tag-color__color__border" style="background-color:<?php the_field('color_2');?>;"></div>	
-										<div style="background-color:<?php the_field('color_3');?>;"></div>
+										<div class="color-item" style="background-color:<?php the_field('color_1');?>;
+											<?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>
+										<div class="color-item" style="background-color:<?php the_field('color_2');?>;
+											<?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>	
+										<div class="color-item" style="background-color:<?php the_field('color_3');?>;
+											<?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>
 									</div>
 								</div>					
 							</div>
@@ -162,9 +168,15 @@
 										<?php the_tags( ' ', ', ', '<br />' ); ?>
 									</div>
 									<div class="collection__grid__item-2__grid__item__tag-color__color">
-										<div style="background-color:<?php the_field('color_1');?>;"></div>
-										<div style="background-color:<?php the_field('color_2');?>;"></div>	
-										<div style="background-color:<?php the_field('color_3');?>;"></div>
+										<div class="color-item" style="background-color:<?php the_field('color_1');?>;
+											<?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>
+										<div class="color-item" style="background-color:<?php the_field('color_2');?>;
+											<?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>	
+										<div class="color-item" style="background-color:<?php the_field('color_3');?>;
+											<?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+										</div>
 									</div>
 								</div>	
 								<div class="collection__grid__item-2__grid__item__price">
@@ -201,9 +213,15 @@
 									<?php the_tags( ' ', ', ', '<br />' ); ?>
 								</div>
 								<div class="sub-collection__contain__item__tag-color__color">
-									<div style="background-color:<?php the_field('color_1');?>;"></div>
-									<div style="background-color:<?php the_field('color_2');?>;"></div>	
-									<div style="background-color:<?php the_field('color_3');?>;"></div>
+									<div class="color-item" style="background-color:<?php the_field('color_1');?>;
+										<?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>
+									<div class="color-item" style="background-color:<?php the_field('color_2');?>;
+										<?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>	
+									<div class="color-item" style="background-color:<?php the_field('color_3');?>;
+										<?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>
 								</div>
 							</div>	
 							<div class="sub-collection__contain__item__price">
@@ -233,9 +251,15 @@
 									<?php the_tags( ' ', ', ', '<br />' ); ?>
 								</div>
 								<div class="sub-collection__contain-abs__item__tag-color__color">
-									<div style="background-color:<?php the_field('color_1');?>;"></div>
-									<div style="background-color:<?php the_field('color_2');?>;"></div>	
-									<div style="background-color:<?php the_field('color_3');?>;"></div>
+									<div class="color-item" style="background-color:<?php the_field('color_1');?>;
+										<?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>
+									<div class="color-item" style="background-color:<?php the_field('color_2');?>;
+										<?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>	
+									<div class="color-item" style="background-color:<?php the_field('color_3');?>;
+										<?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+									</div>
 								</div>
 							</div>	
 							<div class="sub-collection__contain-abs__item__price">
@@ -325,9 +349,15 @@
 							<?php the_tags( ' ', ', ', '<br />' ); ?>
 						</div>
 						<div class="best-seller__grid__item__tag-color__color">
-							<div style="background-color:<?php the_field('color_1');?>;"></div>
-							<div style="background-color:<?php the_field('color_2');?>;"></div>	
-							<div style="background-color:<?php the_field('color_3');?>;"></div>
+							<div class="color-item" style="background-color:<?php the_field('color_1');?>;
+								<?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+							</div>
+							<div class="color-item" style="background-color:<?php the_field('color_2');?>;
+								<?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+							</div>	
+							<div class="color-item" style="background-color:<?php the_field('color_3');?>;
+								<?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+							</div>
 						</div>
 					</div>	
 					<div class="best-seller__grid__item__price">

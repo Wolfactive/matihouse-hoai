@@ -6,6 +6,7 @@
         display:none;
     }
 </style>
+<p><?php echo get_field("sub_banner_item_1"); ?></p>
 <section class="details-post-type">		
 	<div class="container">
 		<div class="details-post-type__menu-bar">
@@ -13,8 +14,10 @@
 				<img src="<?php the_field('memu_black','option') ?>" alt="">
 			</div>
 			<div class="details-post-type__menu-bar__logo">
-				<img src="<?php the_field('logo_black','option') ?>" alt="">
-			</div>
+                <a href="<?php echo site_url( '/home-page/' ); ?>">
+					<img src="<?php the_field('logo_black','option') ?>" alt="">
+				</a>
+            </div>
 			<div class="details-post-type__menu-bar__group-icon">
 				<div class="details-post-type__menu-bar__group-icon__cart">
 					<img src="<?php the_field('cart_black','option') ?>" alt="">
@@ -94,7 +97,12 @@
                                     <span>Size:</span>
                                 </div>
                                 <div class="details-body__grid__right__item-1__grid__content__size__dropdown">
-                                    S <a href=""> <i class="fas fa-caret-down"></i></a> 
+                                    <select name="" id="">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="details-body__grid__right__item-1__grid__content__quantity">
@@ -102,7 +110,9 @@
                                     <span>Quantity</span>
                                 </div>
                                 <div class="details-body__grid__right__item-1__grid__content__quantity__plus">
-                                    <span>- 1 +</span>
+                                    <input type="button" onclick="down();" value="-">
+                                    <input type="number" value="1" id="quanlity">
+                                    <input type="button" onclick="plus();" value="+">
                                 </div>
                             </div>
                             <div class="details-body__grid__right__item-1__grid__content__price">
@@ -150,7 +160,12 @@
                                     <span>Size:</span>
                                 </div>
                                 <div class="details-body__grid__right__item-3__size__dropdown">
-                                    S <a href=""> <i class="fas fa-caret-down"></i></a> 
+                                    <select name="" id="">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="details-body__grid__right__item-3__quantity">
@@ -158,7 +173,9 @@
                                     <span>Quantity</span>
                                 </div>
                                 <div class="details-body__grid__right__item-3__quantity__plus">
-                                    <span>- 1 +</span>
+                                    <input type="button" onclick="down();" value="-">
+                                    <input type="number" value="1" id="quanlity">
+                                    <input type="button" onclick="plus();" value="+">
                                 </div>
                             </div>
                             <div class="details-body__grid__right__item-3__price">
@@ -213,7 +230,12 @@
                                     <span>Size:</span>
                                 </div>
                                 <div class="details-body__grid__bottom__item-3__size__dropdown">
-                                    S <a href=""> <i class="fas fa-caret-down"></i></a> 
+                                    <select name="" id="">
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="ddetails-body__grid__bottom__item-3__quantity">
@@ -221,7 +243,9 @@
                                     <span>Quantity</span>
                                 </div>
                                 <div class="details-body__grid__bottom__item-3__quantity__plus">
-                                    <span>- 1 +</span>
+                                    <input type="button" onclick="down();" value="-">
+                                    <input type="number" value="1" id="quanlity">
+                                    <input type="button" onclick="plus();" value="+">
                                 </div>
                             </div>
                             <div class="details-body__grid__bottom__item-3__price">
@@ -287,9 +311,15 @@
 							<?php the_tags( ' ', ', ', '<br />' ); ?>
 						</div>
 						<div class="recently-view__grid__item__tag-color__color">
-							<div style="background-color:<?php the_field('color_1');?>;"></div>
-							<div style="background-color:<?php the_field('color_2');?>;"></div>	
-							<div style="background-color:<?php the_field('color_3');?>;"></div>
+                            <div class="color-item" style="background-color:<?php the_field('color_1');?>;
+                                <?php if(get_field('color_1')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                            </div>
+                            <div class="color-item" style="background-color:<?php the_field('color_2');?>;
+                                <?php if(get_field('color_2')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                            </div>	
+                            <div class="color-item" style="background-color:<?php the_field('color_3');?>;
+                                <?php if(get_field('color_3')=="#ffffff"){echo 'border:1px solid #000;';}?>">
+                            </div>
 						</div>
 					</div>	
 					<div class="recently-view__grid__item__price">
