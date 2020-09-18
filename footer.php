@@ -5,11 +5,11 @@
   <div class="footer">
     <div class="footer__grid">
       <div class="footer__grid__item-1">
-        <img src="<?php the_field('logo','option') ?>" alt="">
+        <a href="<?php echo site_url('/home/'); ?>"><img src="<?php the_field('logo','option') ?>" alt=""></a>
       </div>
       <div class="footer__grid__item-2">
           <div class="footer__grid__item-2__title">
-              <h3>catalogue</h3>
+              <a href="<?php echo site_url('/category/catalog'); ?>"><h3>catalogue</h3></a>
             </div>
           <?php
             wp_nav_menu( array( 
@@ -18,7 +18,7 @@
       </div>
         <div class="footer__grid__item-3">
           <div class="footer__grid__item-3__title">
-            <h3>shop</h3>
+          <a href="<?php echo site_url('/shop/'); ?>"><h3>shop</h3></a>
           </div>
         <?php
           wp_nav_menu( array( 
@@ -28,7 +28,7 @@
         </div>
         <div class="footer__grid__item-4">
           <div class="footer__grid__item-4__title">
-            <h3>contacts</h3>
+          <a href="<?php echo site_url('/contact/'); ?>"><h3>contacts</h3></a>
           </div>
           <div class="footer__grid__item-4__phone">
             <a href="">0911 955 500</a>
@@ -104,6 +104,22 @@
   </div>
 </div>
 </footer>  
+<script>
+    var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("my-carousel");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000); 
+  }
+</script>
 <script scr="<?php _e(get_theme_file_uri('/assets/js/custom.js'))?>"></script>
   <?php wp_footer(); ?>   
  </body>
