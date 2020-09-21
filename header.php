@@ -7,7 +7,9 @@
      <meta property="og:image" content="<?php echo esc_url($featured_img_url); ?>" />
 	<link rel="profile" href="http://wolfactive.net/">
 	<link rel="stylesheet" href="<?php _e(get_theme_file_uri('/assets/fonts/fontawesome-free-5.14.0-web/css/all.css'))?>">
-     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	<link rel="stylesheet" href="<?php _e(get_theme_file_uri('/assets/css/slick.css'))?>">
+	<link rel="stylesheet" href="<?php _e(get_theme_file_uri('/assets/css/slick-theme.css'))?>">
      <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

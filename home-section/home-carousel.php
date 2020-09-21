@@ -35,7 +35,7 @@
 						</div>
 					</div>		
 				</div>
-				<div class="container-img__dot">
+				<!-- <div class="container-img__dot">
 					<div class="container abs--dot">
 						<div class="container-img__dot__group">
 							<div class="container-img__dot__group__item-circle">
@@ -54,7 +54,7 @@
 						</div>
 						
 					</div>	
-				</div>
+				</div> -->
 				<div class="container-img__icon">
 					<div class="container">
 						<div class="container-img__icon__item">

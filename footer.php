@@ -105,22 +105,21 @@
 </div>
 </footer>  
 <script>
-    var myIndex = 0;
-  carousel();
-  
-  function carousel() {
-    var i;
-    var x = document.getElementsByClassName("my-carousel");
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";  
+$(document).ready(function(){
+  $('.carousel').slick(
+    {
+      dots:true,
+      autoplay: true,
+      autoplaySpeed: 10000,
+
     }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 6000); 
-  }
+  );
+});
 </script>
+
 <script scr="<?php _e(get_theme_file_uri('/assets/js/custom.js'))?>"></script>
+<script scr="<?php _e(get_theme_file_uri('/assets/js/slick.min.js'))?>"></script>
+<script scr="<?php _e(get_theme_file_uri('/assets/js/jquery.js'))?>"></script>
   <?php wp_footer(); ?>   
  </body>
 </html>
