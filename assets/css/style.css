@@ -114,12 +114,12 @@ img {
 }
 
 .container {
-  width: 1150px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
 .container-fuild {
-  width: 1300px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -435,27 +435,6 @@ a {
 }
 
 /*border radius*/
-.border--solid-2 {
-  border: 2px solid var(--primary-color);
-}
-
-.border--1 {
-  border-radius: 8px;
-}
-
-.border--2 {
-  border-radius: 13px;
-}
-
-.border--3 {
-  border-radius: 17px;
-}
-
-.border--50 {
-  border-radius: 50%;
-}
-
-/*border radius*/
 .box-shadow {
   -webkit-box-shadow: 4px 2px 7px 3px #80808045;
           box-shadow: 4px 2px 7px 3px #80808045;
@@ -588,9 +567,40 @@ a {
 /*-----=======CSS Amination======-----*/
 /*-----=======Code Here=====-----*/
 /*----Header----*/
+.menu-bar__group-icon__search {
+  position: relative;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.menu-bar__group-icon__search:hover .search-form input {
+  width: 220px;
+}
+
+.search-form {
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.search-form input {
+  -webkit-transition: 1s;
+  transition: 1s;
+  padding: 6px 0px;
+  width: 0px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: none;
+}
+
+.search-form input:focus {
+  outline: none;
+  border: none;
+}
+
 .site-header {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   z-index: 1000;
   padding-top: 45px;
@@ -615,6 +625,15 @@ a {
   width: auto;
 }
 
+.site-header .menu-bar__icon i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.site-header .menu-bar__icon i:hover {
+  cursor: pointer;
+}
+
 .site-header .menu-bar__logo {
   margin-left: 150px;
 }
@@ -630,6 +649,16 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 200px;
+}
+
+.site-header .menu-bar__group-icon a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.sub-menu-view {
+  margin: 100px 0px 0px;
 }
 
 .sub-menu-view .sub-menu-cat {
@@ -2258,7 +2287,7 @@ a {
   font-weight: 100;
   font-family: PlayfairDisplay;
   text-transform: uppercase;
-  font-size: 95px;
+  font-size: 85px;
 }
 
 .sub-banner__item__title p {
@@ -3703,6 +3732,15 @@ footer .footer__grid__item-5__email input:focus {
   .container {
     max-width: 90%;
   }
+  .site-header .menu-bar__icon i {
+    font-size: 18px;
+  }
+  .site-header .menu-bar__group-icon a {
+    font-size: 18px;
+  }
+  .details-body__grid__right__item-1__grid__content-ipad__title h3 {
+    font-size: 24px;
+  }
   .site-header-home-page .container-img__aturmn__item h1 {
     font-size: 40px;
   }
@@ -3777,7 +3815,7 @@ footer .footer__grid__item-5__email input:focus {
     width: 70%;
   }
   .site-header .menu-bar__group-icon {
-    width: auto;
+    width: 90px;
   }
   .col-divide-7 {
     max-width: 100%;

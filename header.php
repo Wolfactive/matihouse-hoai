@@ -18,7 +18,13 @@
 	<div class="container">
 		<div class="menu-bar">
 			<div class="menu-bar__icon">
-				<span onclick="openNav()"><img src="<?php the_field('memu','option') ?>" alt=""></span>
+				<span onclick="openNav()">
+					<?php if(is_singular('blog')): ?>
+					<i style="color:#000000;" class="fas fa-bars"></i>	
+					<?php else: ?>
+					<i class="fas fa-bars"></i>
+					<?php endif; ?>	
+				</span>
 
 				<div id="mySidenav" class="sidenav">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
@@ -31,21 +37,30 @@
 			</div>
 			<div class="menu-bar__logo">
 				<a href="<?php echo site_url( '/home/' ); ?>">
-					<img src="<?php the_field('logo','option') ?>" alt="">
+					<?php if(is_page_template('page-templates/Homepage.php') || is_category()):?>
+						<img src="<?php the_field('logo','option') ?>" alt="">
+					<?php else:?>
+						<img src="<?php the_field('logo_black','option') ?>" alt="">
+					<?php 
+						endif;
+					?>
 				</a>	
 			</div>
 			<div class="menu-bar__group-icon">
 				<div class="menu-bar__group-icon__cart">
-					<a href=""><img src="<?php the_field('cart','option') ?>" alt=""></a>
+					<a href="">
+						<i class="fas fa-shopping-bag"></i>
+					</a>
 				</div>
 				<div class="menu-bar__group-icon__user">
-					<a href=""><img src="<?php the_field('user','option') ?>" alt=""></a>
+					<a href=""><i class="far fa-user"></i></a>
 				</div>
 				<div class="menu-bar__group-icon__heart-o">
-					<a href=""><img src="<?php the_field('heart-o','option') ?>" alt=""></a>
+					<a href=""><i class="far fa-heart"></i></a>
 				</div>
 				<div class="menu-bar__group-icon__search">
-					<a href=""><img src="<?php the_field('search','option') ?>" alt=""></a>
+					<a href=""><i class="fas fa-search"></i></a>
+					<?php get_search_form(); ?> 
 				</div>
 			</div>
 		</div>

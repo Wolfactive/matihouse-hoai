@@ -76,7 +76,6 @@ function click_view_size_down() {
 
 window.onscroll = function () {
   myFixMenu();
-  myFixMenu_detail();
 };
 
 function myFixMenu() {
@@ -85,36 +84,21 @@ function myFixMenu() {
     document.getElementsByClassName("site-header")[0].style.background = "#BE1E2D";
     document.getElementsByClassName("site-header")[0].style.padding = "45px 0px 10px 0px";
 
+    if ($(".single-blog")[0]) {
+      document.getElementsByClassName("site-header")[0].style.background = "#ffffff";
+    }
+
     if (window.screen.width > 438) {
-      document.getElementsByClassName("site-header")[0].style.paddingTop = "30px";
+      document.getElementsByClassName("site-header")[0].style.paddingTop = "45px";
+      document.getElementsByClassName("site-header")[0].style.boxShadow = "0px 5px 10px 0px rgba(0,0,0,0.3)";
     } else {
       document.getElementsByClassName("site-header")[0].style.paddingTop = "15px";
+      document.getElementsByClassName("site-header")[0].style.boxShadow = "0px 5px 10px 0px rgba(0,0,0,0.3)";
     }
   } else {
     document.getElementsByClassName("site-header")[0].style.background = "center";
     document.getElementsByClassName("site-header")[0].style.paddingTop = "45px";
-  }
-}
-
-function myFixMenu_detail() {
-  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-    document.getElementsByClassName("details-post-type")[0].style.position = "fixed";
-    document.getElementsByClassName("details-post-type")[0].style.background = "#FFFFFF";
-    document.getElementsByClassName("details-post-type")[0].style.padding = "10px 0px 10px 0px";
-    document.getElementsByClassName("details-post-type")[0].style.marginTop = "0px";
-    document.getElementsByClassName("details-post-type")[0].style.left = "0";
-    document.getElementsByClassName("details-post-type")[0].style.right = "0";
-    document.getElementsByClassName("details-post-type")[0].style.zIndex = "10";
-
-    if (window.screen.width > 438) {
-      document.getElementsByClassName("details-post-type")[0].style.top = "30px";
-    } else {
-      document.getElementsByClassName("details-post-type")[0].style.top = "0px";
-    }
-  } else {
-    document.getElementsByClassName("details-post-type")[0].style.marginTop = "20px";
-    document.getElementsByClassName("details-post-type")[0].style.position = "unset";
-    document.getElementsByClassName("details-post-type")[0].style.padding = "0px";
+    document.getElementsByClassName("site-header")[0].style.boxShadow = "none";
   }
 }
 

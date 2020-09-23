@@ -120,4 +120,5 @@ function wolfactive_post_types() {
             return $specifications_fields;
         
         }
+       
 ?>

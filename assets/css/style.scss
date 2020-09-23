@@ -98,11 +98,11 @@ img{
 	height:auto;
 }
 .container{
-    width: 1150px;
+    max-width: 1150px;
     margin: 0 auto;
 }
 .container-fuild{
-    width: 1300px;
+    max-width: 95%;
     margin: 0 auto;
 }
 .clear{
@@ -352,25 +352,7 @@ a{
 .text--right{
 	text-align: right;
 }
-/*border radius*/
-.border--solid-2{
-	border: 2px solid var(--primary-color);
-}
-.border--1{
-	border-radius:8px;
-}
 
-.border--2{
-	border-radius:13px;
-}
-
-.border--3{
-	border-radius:17px;
-}
-
-.border--50{
-	border-radius:50%;
-}
 /*border radius*/
 .box-shadow{
 	box-shadow:4px 2px 7px 3px #80808045;
@@ -406,9 +388,34 @@ a{
 
 /*-----=======Code Here=====-----*/
 /*----Header----*/
+.menu-bar__group-icon__search{
+    position: relative;
+    transition: 1.5s;
+    &:hover .search-form input{
+        width: 220px;
+    }
+}
+.search-form{
+    position: absolute;
+    top: 5px;
+    right: 0;
+    
+    input{ 
+        transition: 1s;
+        padding: 6px 0px;
+        width: 0px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: none;
+        &:focus{
+            outline: none;
+            border: none;
+        }
+    }
+}
 .site-header{
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     z-index: 1000;
     padding-top:45px;
@@ -422,18 +429,34 @@ a{
             height: 100%;
             width: auto;
         }
+        &__icon{
+            i{
+                color: #ffffff;
+                font-size: 24px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
         &__logo{
             margin-left: 150px;
+            
         }
         &__group-icon{
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 200px;
+            a{
+                text-decoration:none;
+                font-size: 24px;
+                color: #ffffff;
+            }
         }
     } 
 }
 .sub-menu-view{
+    margin: 100px 0px 0px;
     .sub-menu-cat{
         margin:40px auto;
         width: fit-content;
@@ -1675,16 +1698,6 @@ a{
     }
 }
 .sub-banner{
-    // .ab-bg{
-       
-    //         height: 75%;
-    //         width: 100%;
-    //         position: absolute;
-    //         bottom: 0;
-    //         background:#BE1E2D;
-    //         z-index: -1;
-        
-    // }
     &__item{
         position: relative;
         max-width: 1500px;
@@ -1753,7 +1766,7 @@ a{
                 font-weight: 100;
                 font-family: PlayfairDisplay;
                 text-transform: uppercase;
-                font-size: 95px;
+                font-size: 85px;
             }
             p{
                 color:#fff;
@@ -2993,6 +3006,15 @@ a{
     .container{
         max-width: 90%;
     }
+    .site-header .menu-bar__icon i {
+        font-size: 18px;
+    }
+    .site-header .menu-bar__group-icon a {
+        font-size: 18px;
+    }
+    .details-body__grid__right__item-1__grid__content-ipad__title h3{
+        font-size: 24px;
+    }
     .site-header-home-page .container-img__aturmn__item h1 {
         font-size: 40px;
     }
@@ -3066,7 +3088,7 @@ a{
         width: 70%;
     }
     .site-header .menu-bar__group-icon{
-        width: auto;
+        width: 90px;
     }
     .col-divide-7{
         max-width: 100%;
