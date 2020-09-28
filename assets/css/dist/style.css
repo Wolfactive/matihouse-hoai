@@ -166,7 +166,6 @@ img {
 }
 
 .sidenav a:hover {
-  font-size: 16px;
   color: #ffffff;
   background: #BE1E2D;
 }
@@ -176,8 +175,17 @@ img {
   text-align: center;
   display: block;
   right: 0;
+  background: #BE1E2D;
+  color: #000;
   top: 30px;
   padding: 10px 10px 10px 15px;
+}
+.sidenav .closebtn i {
+  color: #000;
+}
+
+.my_main_menu_class {
+  margin-top: 20px;
 }
 
 .my_main_menu_class .active {
@@ -500,29 +508,51 @@ a {
 /*-----=======Code Here=====-----*/
 /*----Header----*/
 .menu-bar__group-icon__search {
-  position: relative;
   transition: 1.5s;
 }
-.menu-bar__group-icon__search:hover .search-form input {
-  width: 220px;
+.menu-bar__group-icon__search:hover .search-form .input-search {
+  width: 220px !important;
 }
 
 .search-form {
-  position: absolute;
-  top: 5px;
-  right: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.search-form input {
+.search-form .input-search {
+  position: absolute;
+  top: 0;
+  right: 24px;
   transition: 1s;
-  padding: 6px 0px;
+  padding: 7px 0px;
   width: 0px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   border: none;
 }
-.search-form input:focus {
+.search-form .input-search:focus {
   outline: none;
   border: none;
+  text-indent: 10px;
+}
+.search-form .input-search::placeholder {
+  text-indent: 10px;
+}
+.search-form .input-search:hover ~ button {
+  color: #000000 !important;
+  background: #ffffff !important;
+}
+.search-form button {
+  background: center;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+.search-form button:hover {
+  cursor: pointer;
+  color: #000000 !important;
+  background: #ffffff !important;
 }
 
 .site-header {

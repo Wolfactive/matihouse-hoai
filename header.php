@@ -59,7 +59,6 @@
 					<a href=""><i class="far fa-heart"></i></a>
 				</div>
 				<div class="menu-bar__group-icon__search">
-					<a href=""><i class="fas fa-search"></i></a>
 					<?php get_search_form(); ?> 
 				</div>
 			</div>

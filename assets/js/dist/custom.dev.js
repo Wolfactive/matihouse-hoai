@@ -129,3 +129,15 @@ function openNav_detail() {
 function closeNav_detail() {
   document.getElementById("Sidenav").style.width = "0";
 }
+
+window.addEventListener('click', function (e) {
+  if (document.getElementsByClassName("input-search")[0].contains(e.target)) {
+    document.getElementsByClassName("input-search")[0].style.width = "220px";
+    document.getElementsByClassName("btn-submit")[0].style.background = "#ffffff";
+    document.getElementsByClassName("btn-submit")[0].style.color = "#000000";
+  } else {
+    document.getElementsByClassName("input-search")[0].style.width = "0px";
+    document.getElementsByClassName("btn-submit")[0].style.background = "center";
+    document.getElementsByClassName("btn-submit")[0].style.color = "#ffffff";
+  }
+});

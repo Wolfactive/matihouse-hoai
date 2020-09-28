@@ -158,7 +158,6 @@ img{
   }
   
   .sidenav a:hover {
-    font-size: 16px;
     color: #ffffff;
     background: #BE1E2D;
   }
@@ -168,8 +167,17 @@ img{
     text-align: center;
     display: block;
     right: 0;
+    background: #BE1E2D;
+    color: #000;
     top: 30px;
     padding: 10px 10px 10px 15px;
+    i{
+        color: #000;
+    }
+    
+  }
+  .my_main_menu_class{
+      margin-top: 20px;
   }
 .my_main_menu_class .active{
     border: none;
@@ -389,20 +397,21 @@ a{
 /*-----=======Code Here=====-----*/
 /*----Header----*/
 .menu-bar__group-icon__search{
-    position: relative;
     transition: 1.5s;
-    &:hover .search-form input{
-        width: 220px;
+    &:hover .search-form .input-search{
+        width: 220px !important;
     }
 }
 .search-form{
-    position: absolute;
-    top: 5px;
-    right: 0;
-    
-    input{ 
+    display: flex;
+    align-items: center;
+    position: relative;
+    .input-search{ 
+        position: absolute;
+        top: 0;
+        right: 24px;
         transition: 1s;
-        padding: 6px 0px;
+        padding: 7px 0px;
         width: 0px;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
@@ -410,6 +419,27 @@ a{
         &:focus{
             outline: none;
             border: none;
+            text-indent: 10px;
+        }
+        &::placeholder{
+            text-indent: 10px;
+        }
+        &:hover~button{
+            color: #000000 !important;
+            background: #ffffff !important;
+        }
+    }
+    button{
+        background: center;
+        outline: none;
+        border: none;
+        
+        color: #ffffff;
+        font-size: 24px;
+        &:hover{
+            cursor: pointer;
+            color: #000000 !important;
+            background: #ffffff !important;
         }
     }
 }
